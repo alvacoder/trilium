@@ -1,0 +1,16 @@
+name: Generate CycloneDX SBOM and upload to Dependency-Track
+
+on:
+  push:
+    branches: [ sec-sbom-investigation ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Generate CycloneDX SBOM and upload to Dependency-Track
+      uses: CycloneDX/gh-node-module-generatebom@v1
+      with:
+        path: './node_project/'
+        output: './bom_directory/test.app.bom.xml'
