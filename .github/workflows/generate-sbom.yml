@@ -12,5 +12,5 @@ jobs:
     - name: Generate CycloneDX SBOM and upload to Dependency-Track
       uses: CycloneDX/gh-node-module-generatebom@v1
       with:
-        path: './node_project/'
+        path: './'
         output: './bom_directory/test.app.bom.xml'
