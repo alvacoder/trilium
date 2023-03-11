@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install dependencies
+      run: npm install
+      
     - name: Generate CycloneDX SBOM and upload to Dependency-Track
       uses: CycloneDX/gh-node-module-generatebom@v1
       with:
